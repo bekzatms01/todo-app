@@ -1,0 +1,20 @@
+.todo-tasks {
+	width: 600px;
+	margin: 30px 0;
+}
+
+.todo-tasks .task {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+	font-size: 16px;
+}
+
+.task .task-buttons .btn-done {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.task .task-buttons .btn-delete {
+	cursor: pointer;
+}

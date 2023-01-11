@@ -1,0 +1,14 @@
+.todo-container {
+	width: 700px;
+	margin: 200px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-title {
+	font-size: 35px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
