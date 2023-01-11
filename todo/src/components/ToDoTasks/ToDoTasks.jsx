@@ -1,12 +1,11 @@
 import ToDoTask from "./ToDoTask/ToDoTask";
-import { tasks } from "../../initialTasks";
 import "./todo-tasks.css";
 
-const ToDoTasks = () => {
+const ToDoTasks = ({ tasks, dispatch }) => {
 	return (
 		<div className="todo-tasks">
 			{tasks.map((item) => {
-				return <ToDoTask task={item} key={item.id} />;
+				return <ToDoTask task={item} key={item.id} dispatch={dispatch} />;
 			})}
 		</div>
 	);

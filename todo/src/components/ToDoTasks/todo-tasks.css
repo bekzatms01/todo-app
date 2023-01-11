@@ -1,20 +1,30 @@
 .todo-tasks {
-	width: 600px;
-	margin: 30px 0;
+	margin: 20px 0;
 }
 
 .todo-tasks .task {
 	display: flex;
 	justify-content: space-between;
-	margin: 10px 0;
+	margin: 20px 0;
 	font-size: 16px;
 }
 
-.task .task-buttons .btn-done {
+.task input[type="checkbox"] {
+	cursor: pointer;
 	margin-right: 10px;
+	width: 15px;
+	height: 15px;
+}
+
+.task span {
+	font-size: 18px;
+}
+
+.task .fa-trash {
+	color: #8d0b0b;
 	cursor: pointer;
 }
 
-.task .task-buttons .btn-delete {
-	cursor: pointer;
+.done {
+	text-decoration: line-through;
 }

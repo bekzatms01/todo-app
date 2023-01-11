@@ -1,11 +1,19 @@
 import React from "react";
 import "./todo-form.css";
 
-const ToDoForm = () => {
+const ToDoForm = ({ onAdd, text, setText }) => {
 	return (
 		<div className="todo-form">
-			<textarea name="" id="" cols="30" rows="7"></textarea>
-			<button>Save</button>
+			<input
+				type="text"
+				id="title"
+				placeholder="What do you need to do today?"
+				value={text}
+				onChange={(e) => setText(e.target.value)}
+			/>
+			<button onClick={onAdd} className="btn-add">
+				Add
+			</button>
 		</div>
 	);
 };
