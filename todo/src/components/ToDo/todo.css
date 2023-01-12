@@ -13,7 +13,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 200px;
+	height: 170px;
 }
 
 .todo-title {
