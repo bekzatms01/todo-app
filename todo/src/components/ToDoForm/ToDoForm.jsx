@@ -1,15 +1,15 @@
 import React from "react";
 import "./todo-form.css";
 
-const ToDoForm = ({ onAdd, text, setText }) => {
+const ToDoForm = ({ onAdd, task, setTask }) => {
 	return (
 		<div className="todo-form">
 			<input
 				type="text"
 				id="title"
 				placeholder="What do you need to do today?"
-				value={text}
-				onChange={(e) => setText(e.target.value)}
+				value={task}
+				onChange={(e) => setTask(e.target.value)}
 				onKeyDown={(e) => {
 					if (e.key === "Enter") {
 						onAdd();

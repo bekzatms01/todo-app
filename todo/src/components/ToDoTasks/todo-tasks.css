@@ -46,10 +46,7 @@
 		width: 13px;
 		height: 13px;
 	}
-	.task .task-left label {
-		font-size: 16px;
-	}
-
+	.task .task-left label,
 	.task .task-right .fa-trash {
 		font-size: 16px;
 	}
@@ -60,10 +57,7 @@
 		width: 12px;
 		height: 12px;
 	}
-	.task .task-left label {
-		font-size: 14px;
-	}
-
+	.task .task-left label,
 	.task .task-right .fa-trash {
 		font-size: 14px;
 	}

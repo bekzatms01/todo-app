@@ -5,19 +5,22 @@ const reducer = (state, action) => {
 				...state,
 				{
 					id: state.length + 1,
-					title: action.payload,
-					complicated: false,
+					title: action.act,
+					status: action.status,
 				},
 			];
-		case "delete":
-			return state.filter((item) => item.id !== action.payload);
+
 		case "done":
 			return state.map((item) => {
-				if (item.id === action.payload) {
+				if (item.id === action.act) {
 					return { ...item, status: action.status };
 				}
 				return item;
 			});
+
+		case "delete":
+			return state.filter((item) => item.id !== action.act);
+
 		default:
 			return state;
 	}
