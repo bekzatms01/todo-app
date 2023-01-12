@@ -10,6 +10,11 @@ const ToDoForm = ({ onAdd, text, setText }) => {
 				placeholder="What do you need to do today?"
 				value={text}
 				onChange={(e) => setText(e.target.value)}
+				onKeyDown={(e) => {
+					if (e.key === "Enter") {
+						onAdd();
+					}
+				}}
 			/>
 			<button onClick={onAdd} className="btn-add">
 				Add

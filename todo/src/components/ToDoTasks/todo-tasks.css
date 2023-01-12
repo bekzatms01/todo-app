@@ -1,30 +1,70 @@
 .todo-tasks {
-	margin: 20px 0;
+	margin-top: 20px;
 }
 
 .todo-tasks .task {
 	display: flex;
 	justify-content: space-between;
-	margin: 20px 0;
+	margin-top: 20px;
 	font-size: 16px;
 }
 
-.task input[type="checkbox"] {
+.todo-tasks .task:first-child {
+	margin-top: 0;
+}
+
+.task .task-left input[type="checkbox"] {
 	cursor: pointer;
 	margin-right: 10px;
 	width: 15px;
 	height: 15px;
 }
 
-.task span {
+.task .task-left label {
 	font-size: 18px;
+	cursor: pointer;
 }
 
-.task .fa-trash {
+.task .task-right .fa-trash {
 	color: #8d0b0b;
 	cursor: pointer;
 }
 
 .done {
 	text-decoration: line-through;
+}
+
+/* Media and Tablet */
+@media screen and (max-width: 768px) {
+	.todo-tasks .task {
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.task .task-left input[type="checkbox"] {
+		width: 13px;
+		height: 13px;
+	}
+	.task .task-left label {
+		font-size: 16px;
+	}
+
+	.task .task-right .fa-trash {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.task .task-left input[type="checkbox"] {
+		width: 12px;
+		height: 12px;
+	}
+	.task .task-left label {
+		font-size: 14px;
+	}
+
+	.task .task-right .fa-trash {
+		font-size: 14px;
+	}
 }

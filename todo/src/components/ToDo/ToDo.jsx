@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import ToDoForm from "../ToDoForm/ToDoForm";
 import ToDoTasks from "../ToDoTasks/ToDoTasks";
 import { tasks } from "../../initialTasks";
@@ -10,9 +10,9 @@ const ToDo = () => {
 
 	const [text, setText] = useState("");
 
-	// useEffect(() => {
-	// 	console.log(state);
-	// }, [state]);
+	useEffect(() => {
+		console.log(state);
+	}, [state]);
 
 	const onAdd = () => {
 		if (!text) {
@@ -28,10 +28,10 @@ const ToDo = () => {
 	};
 
 	return (
-		<div className="todo-container">
+		<div className={`todo-container ${state.length === 0 && "non-active"}`}>
 			<div className="todo-title">Awesome Todo List</div>
 			<ToDoForm onAdd={onAdd} text={text} setText={setText} />
-			<ToDoTasks tasks={state} dispatch={dispatch} />
+			{state.length > 0 && <ToDoTasks tasks={state} dispatch={dispatch} />}
 		</div>
 	);
 };

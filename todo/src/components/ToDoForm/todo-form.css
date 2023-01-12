@@ -6,6 +6,7 @@
 	width: 100%;
 	padding: 10px 15px;
 	margin-right: 10px;
+	font-size: 16px;
 }
 
 .todo-form .btn-add {
@@ -15,4 +16,25 @@
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+}
+
+/* Media and Tablet */
+@media screen and (max-width: 550px) {
+	.todo-form input {
+		padding: 8px 12px;
+		font-size: 14px;
+	}
+	.todo-form .btn-add {
+		padding: 8px 20px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.todo-form input {
+		padding: 5px 8px;
+		font-size: 13px;
+	}
+	.todo-form .btn-add {
+		padding: 5px 20px;
+	}
 }
