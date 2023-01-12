@@ -6,7 +6,17 @@
 	box-sizing: border-box;
 }
 
+html {
+	background: url("../public/images/todo.jpg") no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
+}
+
 body {
+	height: 100%;
 	font-family: "Roboto", sans-serif;
-	background-color: #c6c6c6;
+}
+
+#root {
+	min-height: 100vh;
 }
