@@ -8,6 +8,7 @@ const ToDoTask = ({ task, onDone, onDelete }) => {
 					type="checkbox"
 					id={task.id}
 					onChange={() => onDone(task.id, task.status)}
+					checked={task.status}
 				/>
 
 				<label htmlFor={task.id} className={`${task.status && "done"}`}>
