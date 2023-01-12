@@ -1,8 +1,9 @@
 .todo-container {
 	width: 700px;
-	margin: 30px auto;
-	display: flex;
-	flex-direction: column;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
 	border-radius: 7px;
 	background-color: #fff;
 	padding: 20px 40px;
@@ -41,6 +42,9 @@
 	.todo-container {
 		width: 370px;
 		padding: 20px;
+	}
+	.todo-container.non-active {
+		height: 150px;
 	}
 	.todo-title {
 		font-size: 16px;
